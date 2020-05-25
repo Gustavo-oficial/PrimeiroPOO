@@ -1,34 +1,27 @@
-﻿using System;
+﻿  
+using System;
 
-namespace primeiro_POO
+namespace PrimeiroPoo
 {
-    class Personagem
+    class Program
     {
-        public string nome = "Batman";
-
-        public int idade = 70 ;
-
-        public string armadura; 
-
-        public string Atacar()
-        {
-            return "O personagem atacou";
-        }
-
         static void Main(string[] args)
-
-        
         {
-            Personagem Batman = new Personagem();
-            Batman.nome = " Bruce Wayne";
-            Batman.idade = 70;
-            Batman.armadura = "Latéx preto";
+            Personagem batman = new Personagem();
+            batman.nome = "Bruce Wayne";
+            batman.idade = 81;
 
-            Console.WriteLine("O nome real do Batman é"+Batman.nome);
-            Console.WriteLine("A idade do Batman é:"+Batman.idade);
+            Console.WriteLine(batman.Atacar());
+
+            Console.WriteLine("-----------------------");
+            
+            Console.WriteLine("A vida restante é:" +batman.calcularVida(10f) );
+
+            Console.WriteLine("-----------------------");
+
+            Console.WriteLine("O dano foi de:" +batman.calcularDano(10f));
+
+
         }
-        
-        
-
     }
 }
